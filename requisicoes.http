@@ -1,0 +1,29 @@
+### Adicionar jogador
+POST http://localhost:3000/jogador
+Content-Type: application/json
+
+{"nome_jogador":"Paulo","habilidade_principal":"ruim"}
+
+### Listar ativos
+GET http://localhost:3000/jogador
+
+### Buscar por nome
+GET http://localhost:3000/jogador/buscar?nome=Fallen
+
+### Consultar codigo 1
+GET http://localhost:3000/jogador/2
+
+### Editar
+PUT http://localhost:3000/jogador/1
+Content-Type: application/json
+
+{"nome_jogador":"Fallen","habilidade_principal":"Lideranca"}
+
+### Exclusao logica
+DELETE http://localhost:3000/jogador/1?tipo=logica
+
+### Listar inclusive excluidos
+GET http://localhost:3000/jogador?incluirExcluidos=true
+
+### Exclusao definitiva (pode remover registro anteriormente excluido logicamente)
+DELETE http://localhost:3000/jogador/1?tipo=definitiva

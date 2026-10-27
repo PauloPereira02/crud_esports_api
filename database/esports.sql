@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS esports;
+USE esports;
+
+CREATE TABLE IF NOT EXISTS jogador (
+  codigo_jogador INT AUTO_INCREMENT PRIMARY KEY,
+  nome_jogador VARCHAR(100) NOT NULL,
+  habilidade_principal VARCHAR(100) NOT NULL,
+  excluido BOOLEAN NOT NULL DEFAULT FALSE
+);

@@ -1,0 +1,16 @@
+{
+  "name": "api-esports-mysql",
+  "version": "1.0.0",
+  "description": "API CRUD de jogadores de eSports baseada no exemplo Apicrud",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "dev": "node --env-file=.env --watch server.js",
+    "check": "node --check server.js && node --check controller/jogador_controller.js && node --check routes/jogador_rota.js && node --check service/jogador_service.js && node --check config/connection.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0"
+  }
+}
